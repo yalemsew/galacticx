@@ -9,3 +9,4 @@ public record SatelliteRequestDto(
         @Pattern(regexp = "LEO|MEO|GEO", message = "Orbit type must be one of: LEO, MEO, GEO") String orbitType
 ) {}
 
+

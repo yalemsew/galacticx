@@ -33,5 +33,19 @@ public class SatelliteService {
         Satellite updated = satelliteRepository.save(satellite);
         return new SatelliteResponseDto(updated.getId(), updated.getName());
     }
+
+    // to create satellite
+    public SatelliteResponseDto createSatellite(SatelliteRequestDto dto) {
+        Satellite satellite = new Satellite();
+        satellite.setName(dto.name());
+        satellite.setLaunchDate(dto.launchDate());
+        satellite.setOrbitType(dto.orbitType());
+        satellite.setDecommissioned(false); // default value
+
+        Satellite saved = satelliteRepository.save(satellite);
+
+        return new SatelliteResponseDto(saved.getId(), saved.getName());
+    }
+
 }
 

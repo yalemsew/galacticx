@@ -23,5 +23,10 @@ public class SatelliteController {
     ) {
         return satelliteService.updateSatellite(id, dto);
     }
+    @PostMapping
+    public SatelliteResponseDto createSatellite(@Valid @RequestBody SatelliteRequestDto dto) {
+        return satelliteService.createSatellite(dto);
+    }
+
 }
 
