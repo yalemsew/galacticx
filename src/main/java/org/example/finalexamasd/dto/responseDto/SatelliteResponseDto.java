@@ -1,8 +1,7 @@
 package org.example.finalexamasd.dto.responseDto;
 
-package com.galacticx.dto;
 
-public record SatelliteSummaryDTO(
+public record SatelliteResponseDto(
         Long id,
         String name
 ) {}
