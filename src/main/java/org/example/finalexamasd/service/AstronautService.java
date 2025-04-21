@@ -10,6 +10,7 @@ import org.example.finalexamasd.model.Satellite;
 import org.example.finalexamasd.repository.AstronautRepository;
 import org.example.finalexamasd.repository.SatelliteRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -63,5 +64,23 @@ public class AstronautService {
                 ))
                 .toList();
     }
+
+    public List<AstronautResponseDto> getAllAstronautsSorted(String sort, String order) {
+        Sort.Direction direction = order.equalsIgnoreCase("desc") ? Sort.Direction.DESC : Sort.Direction.ASC;
+
+        List<Astronaut> astronauts = astronautRepository.findAll(Sort.by(direction, sort));
+
+        return astronauts.stream()
+                .map(astronaut -> new AstronautResponseDto(
+                        astronaut.getId(),
+                        astronaut.getFirstName(),
+                        astronaut.getLastName(),
+                        astronaut.getExperienceYears(),
+                        astronaut.getSatellites().stream()
+                                .map(s -> new SatelliteResponseDto(s.getId(), s.getName()))
+                                .toList()
+                )).toList();
+    }
+
 }
 

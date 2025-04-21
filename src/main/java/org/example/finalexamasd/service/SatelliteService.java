@@ -6,7 +6,6 @@ import org.example.finalexamasd.exception.customExceptions.ResourceNotFoundExcep
 import org.example.finalexamasd.exception.customExceptions.SatelliteUpdateNotAllowedException;
 import org.example.finalexamasd.model.Satellite;
 import org.example.finalexamasd.repository.SatelliteRepository;
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service

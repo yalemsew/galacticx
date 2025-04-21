@@ -22,8 +22,12 @@ public class AstronautController {
     }
 
     @GetMapping
-    public List<AstronautResponseDto> getAllAstronauts() {
-        return astronautService.getAllAstronauts();
+    public List<AstronautResponseDto> getAllAstronauts(
+            @RequestParam(required = false, defaultValue = "experienceYears") String sort,
+            @RequestParam(required = false, defaultValue = "asc") String order
+    ) {
+        return astronautService.getAllAstronautsSorted(sort, order);
     }
+
 }
 

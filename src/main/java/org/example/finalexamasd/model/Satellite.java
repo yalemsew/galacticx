@@ -32,7 +32,4 @@ public class Satellite {
 
     @ManyToMany(mappedBy = "satellites")
     private List<Astronaut> astronauts;
-
-    // Getters and setters
 }
-
