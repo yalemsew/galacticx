@@ -12,10 +12,13 @@ A layered Spring Boot REST API for managing astronauts and satellites. Supports 
 ![Create Astronaut](createAstonaut.png)
 
 ### 2. Get All Astronauts (Sorted)
-![Get Astronauts](getAllAstronaut)
+![Get all Astronauts](getAllAstronaut.png)
 
 ### 3. Error - Decommissioned Satellite Update
-![Error - Satellite Decommissioned](exceptionWithDecommisioned)
+![Error - Satellite Decommissioned](exceptionWithDecommisioned.png)
 
 ### 4. Update Satellite
-![Get Astronauts](updateSatellite)
+![Get Astronauts](updateSatellite.png)
+
+### 5. Exception for updateing un existing satellite
+![Get Astronauts](ExceptionForUpdatingSatellite.png)
