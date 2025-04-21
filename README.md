@@ -5,3 +5,17 @@ A layered Spring Boot REST API for managing astronauts and satellites. Supports 
 🔹 Clean architecture (Controller → Service → Repository)
 🔹 H2 database with sample data
 🔹 Tested via Postman
+
+## 📸 Screenshots
+
+### 1. Create Astronaut (Postman)
+![Create Astronaut](createAstonaut.png)
+
+### 2. Get All Astronauts (Sorted)
+![Get Astronauts](getAllAstronaut)
+
+### 3. Error - Decommissioned Satellite Update
+![Error - Satellite Decommissioned](exceptionWithDecommisioned)
+
+### 4. Update Satellite
+![Get Astronauts](updateSatellite)
